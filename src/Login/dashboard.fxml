@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#BorderPane_dragged" onMousePressed="#BorderPane_pressed" prefHeight="831.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.Dashboardcontroller">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="953.0" style="-fx-background-color: #1778F2;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="57.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestionnaire d'absences des étudiants">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@open-book.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="Exit2" alignment="TOP_RIGHT" layoutX="1118.0" layoutY="12.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#Close" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <VBox prefHeight="781.0" prefWidth="215.0" style="-fx-background-color: white; -fx-border-color: #1778f2; -fx-border-width: 0px 2px 0px 0px;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="152.0" prefWidth="213.0">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.6777251184834123" endY="0.4928909952606635" startX="0.29383886255924163" startY="0.5355450236966826">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.21960784494876862" green="0.5372549295425415" blue="0.7372549176216125" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.09019608050584793" green="0.47058823704719543" blue="0.9490196108818054" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Hyperlink fx:id="Logout" alignment="CENTER" contentDisplay="CENTER" onAction="#Logout" prefHeight="24.0" prefWidth="93.0" text="Logout" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TabPane fx:id="TabPane" prefHeight="781.0" prefWidth="962.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="tab1" text="Consulter les absences">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="etu" layoutX="69.0" layoutY="65.0" prefHeight="555.0" prefWidth="333.0" style="-fx-background-color: #3889bc;">
+                          <columns>
+                            <TableColumn fx:id="id" editable="false" prefWidth="39.0" text="Id" />
+                            <TableColumn fx:id="nom" editable="false" prefWidth="144.0" text="Nom" />
+                              <TableColumn fx:id="Prenom" editable="false" prefWidth="148.0" text="Prenom" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <TableView fx:id="abs" layoutX="482.0" layoutY="64.0" prefHeight="558.0" prefWidth="403.0" style="-fx-background-color: #3889bc;">
+                          <columns>
+                            <TableColumn fx:id="Matiere" editable="false" prefWidth="86.0" text="Matiere" />
+                            <TableColumn fx:id="Enseignant" editable="false" prefWidth="100.0" text="Enseignant" />
+                              <TableColumn fx:id="Date" editable="false" prefWidth="124.0" text="Date" />
+                              <TableColumn fx:id="Num" editable="false" prefWidth="92.0" text="Num seance" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <ComboBox fx:id="comboBox" layoutX="69.0" layoutY="21.0" onAction="#Getstudent" prefHeight="26.0" prefWidth="167.0" />
+                        <Text layoutX="482.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste D'absences">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="print" fitHeight="33.0" fitWidth="37.0" layoutX="827.0" layoutY="19.0" onMouseClicked="#Print" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@printer.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="chart" fitHeight="31.0" fitWidth="30.0" layoutX="768.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pie-chart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab2" text="Annuler absence">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="idetu" layoutX="485.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="idmat" layoutX="485.0" layoutY="262.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="numsea" layoutX="485.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Text layoutX="353.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id de l etudiant : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="353.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id de la matiere :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="353.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num de seance : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="353.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'absence :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="dateabs" layoutX="485.0" layoutY="380.0" style="-fx-background-color: #1778F2;" />
+                        <Rectangle fx:id="errorbox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" layoutX="321.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="293.0" />
+                        <Text fx:id="error" fill="#fffaf4" layoutX="375.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez remplir tous les champs pour continuer" textAlignment="CENTER" visible="false" wrappingWidth="184.77392578125">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="con" layoutX="413.0" layoutY="485.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #1778f2;" text="Continuer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab21" text="Ajouter absence">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="idetu1" layoutX="484.0" layoutY="264.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="idmat1" layoutX="484.0" layoutY="317.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="numsea1" layoutX="484.0" layoutY="374.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Text layoutX="329.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id de l etudiant : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="328.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id de la matiere :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="329.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num de seance : ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="332.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'absence :">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="dateabs1" layoutX="484.0" layoutY="435.0" style="-fx-background-color: #1778F2;" />
+                        <Rectangle fx:id="errorbox1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" layoutX="321.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="293.0" />
+                        <Text fx:id="error1" fill="#fffaf4" layoutX="375.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez remplir tous les champs pour continuer" textAlignment="CENTER" visible="false" wrappingWidth="184.77392578125">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="con1" layoutX="412.0" layoutY="540.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #1778f2;" text="Continuer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="331.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id de l enseignant :  ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="idens" layoutX="486.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: transparent; -fx-border-color: #1778F2; -fx-border-width: 0px 0px 2px 0px;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,20 @@
+#Loginbutton{
+    -fx-background-color: #1778F2;
+}
+#Exit{
+    
+    -fx-text-fill:#1778F2;
+}
+#Logout{
+    
+    -fx-text-fill:#1778F2;
+}
+#AnchorPane{
+    -fx-background-radius: 30px;
+}
+#username{
+    -fx-border-color:#1778F2;
+}
+#pwd{
+    -fx-border-color:#1778F2;
+}

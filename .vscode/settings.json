@@ -1,0 +1,29 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.base.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.controls.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.fxml.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.graphics.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.media.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.swing.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.web.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx-swt.jar",
+        "c:\\Users\\AssFace\\Downloads\\mysql-connector-j-8.0.31\\mysql-connector-j-8.0.31\\mysql-connector-j-8.0.31.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javax.mail.jar",
+        "c:\\Users\\AssFace\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\activation.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\activation.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.base.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.controls.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.fxml.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.graphics.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.media.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.swing.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx.web.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javafx-swt.jar",
+        "d:\\new installation\\Desktop\\Folders\\JAVAProject\\lib\\javax.mail.jar",
+        "c:\\Users\\midou\\Downloads\\mysql-connector-j-8.2.0.jar"
+    ]
+}
